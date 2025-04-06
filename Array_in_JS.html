@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Function</title>
+</head>
+
+<body>
+    <script>
+        const cities = ["Manchester", "Liverpool"];
+        const newLength = cities.push("Bristol");
+        console.log(cities); // [ "Manchester", "Liverpool", "Bristol" ]
+        console.log(cities.length); // 3
+
+
+        const cities1 = ["Manchester", "Liverpool"];
+        cities1.unshift("Edinburgh");
+        console.log(cities1); // [ "Edinburgh", "Manchester", "Liverpool" ]
+
+        const cities2 = ["Manchester", "Liverpool"];
+        cities2.pop();
+        console.log(cities2); // [ "Manchester" ]
+
+
+        const cities3 = ["Manchester", "Liverpool"];
+        cities3.shift();
+        console.log(cities3); // [ "Liverpool" ]
+
+
+        const cities4 = ["Manchester", "Liverpool", "Edinburgh", "Carlisle"];
+        const index = cities4.indexOf("Liverpool");
+        if (index !== -1) {
+            cities4.splice(index, 1);
+        }
+        console.log(cities4); // [ "Manchester", "Edinburgh", "Carlisle" ]
+
+
+        function double(number) {
+            return number * 2
+        }
+        numbers = [4, 7, 2, 8, 23]
+        const doubled = numbers.map(double);
+        console.log(doubled)
+
+
+        function islong(city) {
+            return city.length > 6
+        }
+
+        const citie = ["muzaffarnagar", "kanpur", "meerut", "haridwar"]
+        const new_list = citie.filter(islong)
+        console.log(new_list)
+
+
+        const birds = ["Parrot", "Falcon", "Owl"];
+
+        for (const bird of birds) {
+            console.log(bird);
+        }
+
+        const data = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
+        const splitted = data.split(",")
+        console.log(splitted)
+        console.log(splitted.length)
+
+        const opp = splitted.join(",")
+        console.log(opp)
+        const opp2 = splitted.toString()
+        console.log(opp2)
+
+        const b = Array.of(9.5)
+        console.log(b);
+
+        const myVar = ["Mango", "Apple", "Orange"];
+        const myArray1 = new Array("Hello", myVar, 3.14159);
+        // OR
+        console.log(myArray1);
+
+
+        let myArray3 = ["1", "2", "3"];
+        myArray3 = myArray3.concat("a", "b", "c");
+        // myArray3 is now ["1", "2", "3", "a", "b", "c"]
+
+        const a1 = ["a", 10, "b", 20, "c", 30];
+        const i1 = a1.find((item) => typeof item === "number");
+        console.log(i); // 1
+
+
+        const a2 = ["a", 10, "b", 20, "c", 30];
+        const i2 = a1.findLast((item) => typeof item === "number");
+        console.log(i); // 30
+
+
+        const a3 = ["a", 10, "b", 20, "c", 30];
+        const i3 = a1.findIndex((item) => typeof item === "number");
+        console.log(i); // 1
+
+
+        const a4 = ["a", 10, "b", 20, "c", 30];
+        const i4 = a1.findLastIndex((item) => typeof item === "number");
+        console.log(i); // 5
+
+    </script>
+</body>
+
+</html>

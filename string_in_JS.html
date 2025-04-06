@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions</title>
+</head>
+
+<body>
+    <div class="con">
+        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing ipsum elit. Ab, nemo.</h1>
+    </div>
+    <script>
+        head = document.querySelector("h1")
+        const str = "amar akbar anthony"
+        console.log(str.length);
+        if (str.includes("akbar")) {
+            console.log("found")
+        }
+        else {
+            console.log("not found");
+        }
+        if (str.startsWith("amar")) {
+            console.log("found")
+        }
+        else {
+            console.log("not found");
+        }
+        if (str.endsWith("anthony")) {
+            console.log("found")
+        }
+        else {
+            console.log("not found");
+        }
+        const myWord = "Lorem ipsum dolor sit, amet consectetur adipisicing ipsum elit. Ab, nemo."
+        let first = (myWord.indexOf("ipsum"))
+        console.log(myWord.indexOf("ipsum", first + 1))
+        console.log(myWord.slice(1.9))
+        console.log(myWord.toLowerCase())
+        console.log(myWord.toUpperCase())
+        console.log(myWord.replaceAll("ipsum", "vansh"))
+
+
+
+
+    </script>
+</body>
+
+</html>

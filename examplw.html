@@ -1,0 +1,200 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="theme">Select theme: </label>
+    <select id="theme">
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        <option value="purple">Purple</option>
+        <option value="orange">Orange</option>
+    </select>
+
+    <h1>This is my website</h1>
+
+    <script>
+        const select = document.querySelector("select");
+        const html = document.querySelector("html");
+        document.body.style.padding = "10px";
+
+        function update(bgColor, textColor) {
+            html.style.backgroundColor = bgColor;
+            html.style.color = textColor;
+        }
+
+        select.addEventListener("click", () => {
+            const ch = select.value;
+            switch (ch) {
+                case "black":
+                    update("black", "white")
+                    break
+                case 'white':
+                    update("white", "black")
+                    break
+                case 'purple':
+                    update("purple", "orange")
+                    break
+                case 'orange':
+                    update("orange", "purple")
+                    break
+            }
+        });
+
+    </script>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="textBox" type="text">
+    <div id="output"></div>
+    <script>
+        const textBox = document.querySelector("#textBox");
+        const output = document.querySelector("#output");
+
+        textBox.addEventListener("keydown", (event) => {
+            output.textContent = `You pressed "${event.key}".`;
+        });
+
+    </script>
+</body>
+
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function start</title>
+    <style>
+        .msgBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 242px;
+            background: #eee;
+        }
+
+        .msgBox p {
+            line-height: 1.5;
+            padding: 10px 20px;
+            color: #333;
+            padding-left: 82px;
+            background-position: 25px center;
+            background-repeat: no-repeat;
+
+        }
+
+        .msgBox button {
+            background: none;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 1.1rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Display message box</button>
+
+    <script>
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", () =>
+            displayMessage("Your inbox is almost full — delete some mails", "warning")
+            // displayMessage("Brian: Hi there, how are you today?", "chat"),
+        );
+
+        function displayMessage(msgText, msgType) {
+            const body = document.body;
+
+            const panel = document.createElement("div");
+            panel.setAttribute("class", "msgBox");
+            body.appendChild(panel);
+
+            const msg = document.createElement("p");
+            msg.textContent = msgText;
+            panel.appendChild(msg);
+
+            const closeBtn = document.createElement("button");
+            closeBtn.textContent = "x";
+            panel.appendChild(closeBtn);
+
+            closeBtn.addEventListener("click", () =>
+                panel.parentNode.removeChild(panel),
+            );
+            if (msgType === "warning") {
+                msg.style.backgroundImage = "url(icons/warning.png)";
+                panel.style.backgroundColor = "red";
+            } else if (msgType === "chat") {
+                msg.style.backgroundImage = "url(icons/chat.png)";
+                panel.style.backgroundColor = "aqua";
+            } else {
+                msg.style.paddingLeft = "20px";
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const person = {
+            name: ["Bob", "Smith"],
+            age: 32,
+            bio: function () {
+                console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+            },
+            introduceSelf: function () {
+                console.log(`Hi! I'm ${this.name[0]}.`);
+            },
+        };
+
+        person.name;
+        person.name[0];
+        person.age;
+        person.bio();
+        // "Bob Smith is 32 years old."
+        person.introduceSelf();
+        // "Hi! I'm Bob."
+
+    </script>
+</body>
+
+</html>
